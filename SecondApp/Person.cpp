@@ -1,7 +1,13 @@
+//preprocessor directives first
+
 #include "Person.h"
 #include <iostream>
 
-Person::Person(std::string first, std::string last, int arbitrary) : firstname(first), lastname(last), arbitrarynumber(arbitrary)
+
+//namespacing
+using std::string;
+
+Person::Person(string first, string last, int arbitrary) : firstname(first), lastname(last), arbitrarynumber(arbitrary)
 {
 	std::cout << "constructing " << firstname << " " << lastname << std::endl;
 }
