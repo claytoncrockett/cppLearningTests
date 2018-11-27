@@ -20,6 +20,21 @@ Person::~Person() {
 	std::cout << "destructing " << GetName() << std::endl;
 }
 
+bool Person::operator<(Person const& p) const
+{
+	return arbitrarynumber < p.arbitrarynumber;
+}
+
+bool Person::operator<(int i) const
+{
+	return arbitrarynumber < i;
+}
+
+bool operator<(int i, Person const& p)
+{
+	return i < p.GetNumber();
+}
+
 
 std::string Person::GetName() const {
 	return firstname + " " + lastname;
