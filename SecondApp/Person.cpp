@@ -17,10 +17,10 @@ Person::Person() : arbitrarynumber(0) {
 }
 
 Person::~Person() {
-	std::cout << "destructing " << firstname << " " << lastname << std::endl;
+	std::cout << "destructing " << GetName() << std::endl;
 }
 
 
-std::string Person::getName() {
+std::string Person::GetName() const {
 	return firstname + " " + lastname;
 }
